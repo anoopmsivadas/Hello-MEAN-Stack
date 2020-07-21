@@ -8,5 +8,5 @@ npm start
 
 npm install -g --force nodemon
 
-### To start nodem 
+### To start server 
 nodemon server.js
