@@ -1,2 +1,2 @@
 ## Create new Angular File
-ng new <File name>
+ng new filename
