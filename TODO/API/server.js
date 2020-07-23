@@ -9,6 +9,13 @@ const db = require('./config/mongo');
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
+var corsOptions = {
+    origin: 'http://localhost:4200',
+    optionsSuccessStatus: 200
+  }
+app.use(cors(corsOptions));
+
+
 app.use('/api/task', taskHandler);
 
 app.listen(port, function(err) {

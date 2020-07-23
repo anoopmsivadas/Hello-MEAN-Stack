@@ -14,16 +14,18 @@ router.post('/add', function(req, res) {
 });
 
 router.get('/list', function(req, res) {
+    
     task.find({}, function(err, tasks) {
         if(err) {
+            
             return res.send(err);
         }
         return res.json({tasks:tasks});
     });
 });
 
-router.delete('/delete', function(req, res) {
-    task.findByIdAndDelete(req.body._id, function(err, tasks) {
+router.delete('/delete/:_id', function(req, res) {
+    task.findByIdAndDelete(req.params._id, function(err, tasks) {
         if(err) {
             return res.send(err);
         }

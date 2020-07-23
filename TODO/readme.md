@@ -2,6 +2,9 @@
 
 ## Back end  (Express + Mongo)
 
+### Install Dependencies
+`npm install`
+
 Run with `npm start` or `nodemon server.js`
 
 ## Front End App (Angular 10)
@@ -13,6 +16,7 @@ add components using `ng generate component component-name`
 add service using `ng generate services service-name`
 
 ### To Run the Angular app
+
 
 `ng serve`
 

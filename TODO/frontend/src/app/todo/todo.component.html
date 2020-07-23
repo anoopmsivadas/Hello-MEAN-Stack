@@ -1,0 +1,16 @@
+<div>
+  <h2>TODO</h2>
+  <br />
+  <form [formGroup]="taskForm" (ngSubmit)="addTask()">
+    <input type="text" placeholder="Enter Task" formControlName="description" />
+    <input type="submit" value="Add" />
+  </form>
+  <hr />
+  <div>
+    <ul>
+      <li *ngFor="let task of tasks">
+        <label >{{ task.description }}</label>  
+        <a class="btn btn-primary" (click)="deleteTask(task)">Delete</a></li>
+    </ul>
+  </div>
+</div>
